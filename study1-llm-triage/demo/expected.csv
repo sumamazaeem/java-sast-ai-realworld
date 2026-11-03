@@ -1,0 +1,15 @@
+# test name, category, real vulnerability, cwe, Benchmark version: 1.2, 2016-06-1
+BenchmarkTest00060,pathtraver,true,22
+BenchmarkTest00323,trustbound,false,501
+BenchmarkTest00454,pathtraver,false,22
+BenchmarkTest00630,ldapi,true,90
+BenchmarkTest00637,hash,true,328
+BenchmarkTest01093,sqli,true,89
+BenchmarkTest01216,sqli,false,89
+BenchmarkTest01424,xss,true,79
+BenchmarkTest01743,ldapi,false,90
+BenchmarkTest01865,cmdi,false,78
+BenchmarkTest02262,trustbound,true,501
+BenchmarkTest02319,xss,false,79
+BenchmarkTest02514,cmdi,true,78
+BenchmarkTest02663,crypto,true,327

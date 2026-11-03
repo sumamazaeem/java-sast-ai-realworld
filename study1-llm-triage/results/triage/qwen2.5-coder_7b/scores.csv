@@ -1,0 +1,15 @@
+policy,findings_triaged,tests_covered,findings_dismissed,dismissed_on_fake_vuln_tests,dismissed_on_real_vuln_tests,findings_on_real_vuln_tests,TP,FP,FN,TN,precision,TPR,FPR,score_pooled,score_benchmark_avg,decision_reasons
+baseline,1763,1482,0,0,0,1210,970,512,445,813,0.6545,0.6855,0.3864,0.2991,0.2679,
+unguarded,1763,1482,214,90,124,1210,900,433,515,892,0.6752,0.636,0.3268,0.3092,0.2989,dismiss=214;keep:verdict=1549
+guarded-v1,1763,1482,120,39,81,1210,934,474,481,851,0.6634,0.6601,0.3577,0.3023,0.2924,dismiss=120;keep:evidence=13;keep:severity=81;keep:verdict=1549
+guarded,1763,1482,63,39,24,1210,946,474,469,851,0.6662,0.6686,0.3577,0.3108,0.3009,dismiss=63;keep:evidence=13;keep:severity=81;keep:verdict=1549;keep:weakcrypto=57
+guarded-no-schema,1763,1482,63,39,24,1210,946,474,469,851,0.6662,0.6686,0.3577,0.3108,0.3009,dismiss=63;keep:evidence=13;keep:severity=81;keep:verdict=1549;keep:weakcrypto=57
+guarded-no-evidence,1763,1482,67,41,26,1210,944,472,471,853,0.6667,0.6671,0.3562,0.3109,0.3027,dismiss=67;keep:severity=87;keep:verdict=1549;keep:weakcrypto=60
+guarded-no-weakcrypto,1763,1482,120,39,81,1210,934,474,481,851,0.6634,0.6601,0.3577,0.3023,0.2924,dismiss=120;keep:evidence=13;keep:severity=81;keep:verdict=1549
+guarded-no-severity,1763,1482,144,87,57,1210,921,436,494,889,0.6787,0.6509,0.3291,0.3218,0.3098,dismiss=144;keep:evidence=13;keep:verdict=1549;keep:weakcrypto=57
+guarded-no-unsure,1763,1482,64,39,25,1210,945,474,470,851,0.666,0.6678,0.3577,0.3101,0.3005,dismiss=64;keep:evidence=13;keep:severity=87;keep:verdict=1540;keep:weakcrypto=59
+only-schema,1763,1482,214,90,124,1210,900,433,515,892,0.6752,0.636,0.3268,0.3092,0.2989,dismiss=214;keep:verdict=1549
+only-evidence,1763,1482,201,87,114,1210,909,436,506,889,0.6758,0.6424,0.3291,0.3133,0.3014,dismiss=201;keep:evidence=13;keep:verdict=1549
+only-weakcrypto,1763,1482,154,90,64,1210,915,433,500,892,0.6788,0.6466,0.3268,0.3199,0.3095,dismiss=154;keep:verdict=1549;keep:weakcrypto=60
+only-severity,1763,1482,127,41,86,1210,929,472,486,853,0.6631,0.6565,0.3562,0.3003,0.2921,dismiss=127;keep:severity=87;keep:verdict=1549
+only-confidence,1763,1482,214,90,124,1210,900,433,515,892,0.6752,0.636,0.3268,0.3092,0.2989,dismiss=214;keep:verdict=1549

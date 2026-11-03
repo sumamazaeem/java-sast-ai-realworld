@@ -1,0 +1,16 @@
+policy,findings_triaged,tests_covered,findings_dismissed,dismissed_on_fake_vuln_tests,dismissed_on_real_vuln_tests,findings_on_real_vuln_tests,TP,FP,FN,TN,precision,TPR,FPR,score_pooled,score_benchmark_avg,decision_reasons
+baseline,2160,1946,0,0,0,1602,1415,531,0,794,0.7271,1.0,0.4008,0.5992,0.6201,
+unguarded,2160,1946,437,182,255,1602,1209,352,206,973,0.7745,0.8544,0.2657,0.5888,0.6047,dismiss=437;keep:verdict=1723
+guarded-v1,2160,1946,105,6,99,1602,1363,528,52,797,0.7208,0.9633,0.3985,0.5648,0.5926,dismiss=105;keep:evidence=28;keep:schema=5;keep:severity=304;keep:verdict=1718
+guarded,2160,1946,0,0,0,1602,1415,531,0,794,0.7271,1.0,0.4008,0.5992,0.6201,keep:evidence=28;keep:schema=5;keep:severity=304;keep:verdict=1718;keep:weakcrypto=105
+guarded-no-schema,2160,1946,0,0,0,1602,1415,531,0,794,0.7271,1.0,0.4008,0.5992,0.6201,keep:evidence=28;keep:severity=304;keep:verdict=1723;keep:weakcrypto=105
+guarded-no-evidence,2160,1946,0,0,0,1602,1415,531,0,794,0.7271,1.0,0.4008,0.5992,0.6201,keep:schema=5;keep:severity=324;keep:verdict=1718;keep:weakcrypto=113
+guarded-no-weakcrypto,2160,1946,105,6,99,1602,1363,528,52,797,0.7208,0.9633,0.3985,0.5648,0.5926,dismiss=105;keep:evidence=28;keep:schema=5;keep:severity=304;keep:verdict=1718
+guarded-no-severity,2160,1946,304,164,140,1602,1275,367,140,958,0.7765,0.9011,0.277,0.6241,0.6376,dismiss=304;keep:evidence=28;keep:schema=5;keep:verdict=1718;keep:weakcrypto=105
+guarded-no-unsure,2160,1946,0,0,0,1602,1415,531,0,794,0.7271,1.0,0.4008,0.5992,0.6201,keep:evidence=29;keep:schema=5;keep:severity=315;keep:verdict=1698;keep:weakcrypto=113
+only-schema,2160,1946,437,182,255,1602,1209,352,206,973,0.7745,0.8544,0.2657,0.5888,0.6047,dismiss=437;keep:schema=5;keep:verdict=1718
+only-evidence,2160,1946,409,170,239,1602,1223,364,192,961,0.7706,0.8643,0.2747,0.5896,0.6102,dismiss=409;keep:evidence=28;keep:verdict=1723
+only-weakcrypto,2160,1946,324,175,149,1602,1266,356,149,969,0.7805,0.8947,0.2687,0.626,0.6349,dismiss=324;keep:verdict=1723;keep:weakcrypto=113
+only-severity,2160,1946,113,7,106,1602,1358,527,57,798,0.7204,0.9597,0.3977,0.562,0.5899,dismiss=113;keep:severity=324;keep:verdict=1723
+only-confidence,2160,1946,437,182,255,1602,1209,352,206,973,0.7745,0.8544,0.2657,0.5888,0.6047,dismiss=437;keep:verdict=1723
+guarded+agree,2160,1946,0,0,0,1602,1415,531,0,794,0.7271,1.0,0.4008,0.5992,0.6201,keep:evidence=28;keep:schema=5;keep:severity=304;keep:verdict=1718;keep:weakcrypto=105

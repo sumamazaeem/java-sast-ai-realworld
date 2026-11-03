@@ -1,0 +1,10 @@
+{
+ "findings": 100,
+ "mean_s": 2.786,
+ "median_s": 2.605,
+ "p95_s": 3.47,
+ "max_s": 14.41,
+ "output_tokens_per_s": 43.9,
+ "findings_per_10min_budget": 215,
+ "note": "Qwen2.5-Coder 7B, RTX 2070 capped at 150 W, CPU lane paused, one finding at a time"
+}

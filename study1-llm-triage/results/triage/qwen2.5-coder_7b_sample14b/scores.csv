@@ -1,0 +1,16 @@
+policy,findings_triaged,tests_covered,findings_dismissed,dismissed_on_fake_vuln_tests,dismissed_on_real_vuln_tests,findings_on_real_vuln_tests,TP,FP,FN,TN,precision,TPR,FPR,score_pooled,score_benchmark_avg,decision_reasons
+baseline,514,488,0,0,0,359,970,512,445,813,0.6545,0.6855,0.3864,0.2991,0.2679,
+unguarded,514,488,64,24,40,359,933,489,482,836,0.6561,0.6594,0.3691,0.2903,0.2603,dismiss=64;keep:verdict=450
+guarded-v1,514,488,30,7,23,359,950,505,465,820,0.6529,0.6714,0.3811,0.2902,0.2597,dismiss=30;keep:evidence=7;keep:severity=27;keep:verdict=450
+guarded,514,488,10,7,3,359,967,505,448,820,0.6569,0.6834,0.3811,0.3023,0.2716,dismiss=10;keep:evidence=7;keep:severity=27;keep:verdict=450;keep:weakcrypto=20
+guarded-no-schema,514,488,10,7,3,359,967,505,448,820,0.6569,0.6834,0.3811,0.3023,0.2716,dismiss=10;keep:evidence=7;keep:severity=27;keep:verdict=450;keep:weakcrypto=20
+guarded-no-evidence,514,488,13,9,4,359,966,503,449,822,0.6576,0.6827,0.3796,0.3031,0.2738,dismiss=13;keep:severity=29;keep:verdict=450;keep:weakcrypto=22
+guarded-no-weakcrypto,514,488,30,7,23,359,950,505,465,820,0.6529,0.6714,0.3811,0.2902,0.2597,dismiss=30;keep:evidence=7;keep:severity=27;keep:verdict=450
+guarded-no-severity,514,488,37,22,15,359,955,491,460,834,0.6604,0.6749,0.3706,0.3043,0.273,dismiss=37;keep:evidence=7;keep:verdict=450;keep:weakcrypto=20
+guarded-no-unsure,514,488,10,7,3,359,967,505,448,820,0.6569,0.6834,0.3811,0.3023,0.2716,dismiss=10;keep:evidence=7;keep:severity=30;keep:verdict=445;keep:weakcrypto=22
+only-schema,514,488,64,24,40,359,933,489,482,836,0.6561,0.6594,0.3691,0.2903,0.2603,dismiss=64;keep:verdict=450
+only-evidence,514,488,57,22,35,359,938,491,477,834,0.6564,0.6629,0.3706,0.2923,0.261,dismiss=57;keep:evidence=7;keep:verdict=450
+only-weakcrypto,514,488,42,24,18,359,952,489,463,836,0.6607,0.6728,0.3691,0.3037,0.2737,dismiss=42;keep:verdict=450;keep:weakcrypto=22
+only-severity,514,488,35,9,26,359,947,503,468,822,0.6531,0.6693,0.3796,0.2896,0.2604,dismiss=35;keep:severity=29;keep:verdict=450
+only-confidence,514,488,64,24,40,359,933,489,482,836,0.6561,0.6594,0.3691,0.2903,0.2603,dismiss=64;keep:verdict=450
+guarded+agree,514,488,1,1,0,359,970,511,445,814,0.655,0.6855,0.3857,0.2999,0.2683,dismiss=1;keep:agree=9;keep:evidence=7;keep:severity=27;keep:verdict=450;keep:weakcrypto=20

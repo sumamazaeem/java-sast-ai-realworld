@@ -1,0 +1,53 @@
+variant,category,TP,FP,FN,TN,precision,TPR,FPR,score
+semgrep,cmdi,112,96,14,29,0.5385,0.8889,0.768,0.1209
+semgrep,crypto,130,0,0,116,1.0,1.0,0.0,1.0
+semgrep,hash,89,0,40,107,1.0,0.6899,0.0,0.6899
+semgrep,ldapi,26,28,1,4,0.4815,0.963,0.875,0.088
+semgrep,pathtraver,120,106,13,29,0.531,0.9023,0.7852,0.1171
+semgrep,securecookie,0,0,36,31,0.0,0.0,0.0,0.0
+semgrep,sqli,234,143,38,89,0.6207,0.8603,0.6164,0.2439
+semgrep,trustbound,43,18,40,25,0.7049,0.5181,0.4186,0.0995
+semgrep,weakrand,0,0,218,275,0.0,0.0,0.0,0.0
+semgrep,xpathi,14,13,1,7,0.5185,0.9333,0.65,0.2833
+semgrep,xss,202,108,44,101,0.6516,0.8211,0.5167,0.3044
+semgrep,OVERALL (pooled),970,512,445,813,0.6545,0.6855,0.3864,0.2991
+semgrep,OVERALL (avg of categories),,,,,,,,0.2679
+sonarqube,cmdi,0,0,126,125,0.0,0.0,0.0,0.0
+sonarqube,crypto,130,27,0,89,0.828,1.0,0.2328,0.7672
+sonarqube,hash,89,0,40,107,1.0,0.6899,0.0,0.6899
+sonarqube,ldapi,0,0,27,32,0.0,0.0,0.0,0.0
+sonarqube,pathtraver,0,0,133,135,0.0,0.0,0.0,0.0
+sonarqube,securecookie,36,0,0,31,1.0,1.0,0.0,1.0
+sonarqube,sqli,272,232,0,0,0.5397,1.0,1.0,0.0
+sonarqube,trustbound,0,0,83,43,0.0,0.0,0.0,0.0
+sonarqube,weakrand,218,0,0,275,1.0,1.0,0.0,1.0
+sonarqube,xpathi,0,0,15,20,0.0,0.0,0.0,0.0
+sonarqube,xss,0,0,246,209,0.0,0.0,0.0,0.0
+sonarqube,OVERALL (pooled),745,259,670,1066,0.742,0.5265,0.1955,0.331
+sonarqube,OVERALL (avg of categories),,,,,,,,0.3143
+union,cmdi,112,96,14,29,0.5385,0.8889,0.768,0.1209
+union,crypto,130,27,0,89,0.828,1.0,0.2328,0.7672
+union,hash,89,0,40,107,1.0,0.6899,0.0,0.6899
+union,ldapi,26,28,1,4,0.4815,0.963,0.875,0.088
+union,pathtraver,120,106,13,29,0.531,0.9023,0.7852,0.1171
+union,securecookie,36,0,0,31,1.0,1.0,0.0,1.0
+union,sqli,272,232,0,0,0.5397,1.0,1.0,0.0
+union,trustbound,43,18,40,25,0.7049,0.5181,0.4186,0.0995
+union,weakrand,218,0,0,275,1.0,1.0,0.0,1.0
+union,xpathi,14,13,1,7,0.5185,0.9333,0.65,0.2833
+union,xss,202,108,44,101,0.6516,0.8211,0.5167,0.3044
+union,OVERALL (pooled),1262,628,153,697,0.6677,0.8919,0.474,0.4179
+union,OVERALL (avg of categories),,,,,,,,0.4064
+intersection,cmdi,0,0,126,125,0.0,0.0,0.0,0.0
+intersection,crypto,130,0,0,116,1.0,1.0,0.0,1.0
+intersection,hash,89,0,40,107,1.0,0.6899,0.0,0.6899
+intersection,ldapi,0,0,27,32,0.0,0.0,0.0,0.0
+intersection,pathtraver,0,0,133,135,0.0,0.0,0.0,0.0
+intersection,securecookie,0,0,36,31,0.0,0.0,0.0,0.0
+intersection,sqli,234,143,38,89,0.6207,0.8603,0.6164,0.2439
+intersection,trustbound,0,0,83,43,0.0,0.0,0.0,0.0
+intersection,weakrand,0,0,218,275,0.0,0.0,0.0,0.0
+intersection,xpathi,0,0,15,20,0.0,0.0,0.0,0.0
+intersection,xss,0,0,246,209,0.0,0.0,0.0,0.0
+intersection,OVERALL (pooled),453,143,962,1182,0.7601,0.3201,0.1079,0.2122
+intersection,OVERALL (avg of categories),,,,,,,,0.1758

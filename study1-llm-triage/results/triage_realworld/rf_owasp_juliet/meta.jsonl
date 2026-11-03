@@ -1,0 +1,1 @@
+{"model": "random-forest", "train": "owasp+juliet", "train_owasp_findings": 1763, "train_juliet_findings": 16930, "train_real": 14227, "train_fake": 4466, "features": "TF-IDF code tokens (1-2 grams, min_df 2, 20k) + rule id one-hot; window 60/60", "rf": "300 trees, class_weight balanced, seed 42", "test_items": "results/items/realworld.jsonl"}

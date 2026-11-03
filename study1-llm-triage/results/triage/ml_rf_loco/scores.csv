@@ -1,0 +1,9 @@
+policy,findings_triaged,tests_covered,findings_dismissed,dismissed_on_fake_vuln_tests,dismissed_on_real_vuln_tests,findings_on_real_vuln_tests,TP,FP,FN,TN,precision,TPR,FPR,score_pooled,score_benchmark_avg,decision_reasons
+baseline,1763,1482,0,0,0,1210,970,512,445,813,0.6545,0.6855,0.3864,0.2991,0.2679,
+unguarded,1763,1482,501,486,15,1210,955,62,460,1263,0.939,0.6749,0.0468,0.6281,0.6434,dismiss=501;keep:verdict=1262
+guarded-v1,1763,1482,165,165,0,1210,970,352,445,973,0.7337,0.6855,0.2657,0.4199,0.4178,dismiss=165;keep:confidence=198;keep:severity=138;keep:verdict=1262
+guarded,1763,1482,286,273,13,1210,957,246,458,1079,0.7955,0.6763,0.1857,0.4907,0.5163,dismiss=286;keep:severity=215;keep:verdict=1262
+guarded-no-schema,1763,1482,286,273,13,1210,957,246,458,1079,0.7955,0.6763,0.1857,0.4907,0.5163,dismiss=286;keep:severity=215;keep:verdict=1262
+guarded-no-evidence,1763,1482,286,273,13,1210,957,246,458,1079,0.7955,0.6763,0.1857,0.4907,0.5163,dismiss=286;keep:severity=215;keep:verdict=1262
+guarded-no-weakcrypto,1763,1482,286,273,13,1210,957,246,458,1079,0.7955,0.6763,0.1857,0.4907,0.5163,dismiss=286;keep:severity=215;keep:verdict=1262
+guarded-no-severity,1763,1482,501,486,15,1210,955,62,460,1263,0.939,0.6749,0.0468,0.6281,0.6434,dismiss=501;keep:verdict=1262

@@ -1,0 +1,2 @@
+excluding CWE-502: 33/107 detected, 11 strict
+164 CVEs scanned; detected (finding in a vulnerable method): 34; detected and not reported again in the fixed method: 12; findings: 7565 (82 TP, 7483 unlabelled)

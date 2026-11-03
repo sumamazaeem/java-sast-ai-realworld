@@ -1,0 +1,23 @@
+a,b,dataset,units,only_a,only_b,test,p,p_holm
+codebert-real,codebert-synth,cwebench,2118,614,563,chi-square (cc),0.145,1
+codebert-real,codebert-synth,cvefixes,426,187,84,chi-square (cc),5.79e-10,1.27e-08
+codebert-real,codebert-synth,javacve,72,32,29,chi-square (cc),0.798,1
+codebert-real,ivib-synth-ivib5p,cwebench,2118,419,525,chi-square (cc),0.000632,0.0126
+codebert-real,ivib-synth-ivib5p,cvefixes,426,65,67,chi-square (cc),0.931,1
+codebert-real,ivib-synth-ivib5p,javacve,72,7,3,exact binomial,0.344,1
+ivib-synth-ivib5p,ivib-synth-ivib5,cwebench,2118,16,14,chi-square (cc),0.855,1
+ivib-synth-ivib5p,ivib-synth-ivib5,cvefixes,426,14,9,exact binomial,0.405,1
+ivib-synth-ivib5p,ivib-synth-ivib5,javacve,72,0,1,exact binomial,1,1
+ivib-synth-llm,ivib-synth-ivib5p,cwebench,2118,43,48,chi-square (cc),0.675,1
+ivib-synth-llm,ivib-synth-ivib5p,cvefixes,426,11,19,chi-square (cc),0.201,1
+ivib-synth-llm,ivib-synth-ivib5p,javacve,72,1,2,exact binomial,1,1
+ivib-real-ivib5p,ivib-synth-ivib5p,cwebench,2118,26,19,chi-square (cc),0.371,1
+ivib-real-ivib5p,ivib-synth-ivib5p,cvefixes,426,12,13,chi-square (cc),1,1
+ivib-real-ivib5p,ivib-synth-ivib5p,javacve,72,1,0,exact binomial,1,1
+ivib-real-llm,ivib-real-ivib5p,cwebench,2118,6,13,exact binomial,0.167,1
+ivib-real-llm,ivib-real-ivib5p,cvefixes,426,3,11,exact binomial,0.0574,1
+ivib-real-llm,ivib-real-ivib5p,javacve,72,0,0,none,1,1
+codeql,codebert-real,cwebench,2118,535,421,chi-square (cc),0.000258,0.00541
+codeql,codebert-real,javacve,72,5,3,exact binomial,0.727,1
+codeql,ivib-synth-ivib5p,cwebench,2118,33,25,chi-square (cc),0.358,1
+codeql,ivib-synth-ivib5p,javacve,72,6,0,exact binomial,0.0312,0.594

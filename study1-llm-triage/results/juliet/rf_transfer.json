@@ -1,0 +1,36 @@
+{
+ "train_findings_owasp": 1763,
+ "juliet_findings": 3423,
+ "juliet_findings_real": 2193,
+ "juliet_findings_fake": 1230,
+ "transfer_accuracy": 0.6407,
+ "dismissed_real": 0,
+ "dismissed_fake": 0,
+ "all": {
+  "cases_with_findings": 1660,
+  "semgrep_alone": {
+   "TPR": 1.0,
+   "FPR": 0.588,
+   "score": 0.412
+  },
+  "semgrep_plus_rf": {
+   "TPR": 1.0,
+   "FPR": 0.588,
+   "score": 0.412
+  }
+ },
+ "owasp_overlap": {
+  "cases_with_findings": 1328,
+  "semgrep_alone": {
+   "TPR": 1.0,
+   "FPR": 0.4864,
+   "score": 0.5136
+  },
+  "semgrep_plus_rf": {
+   "TPR": 1.0,
+   "FPR": 0.4864,
+   "score": 0.5136
+  }
+ },
+ "juliet_internal_cv_accuracy": 0.716
+}

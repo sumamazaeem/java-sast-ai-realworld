@@ -1,0 +1,67 @@
+{
+ "scanner": "codeql",
+ "mode": "full",
+ "commit": "7534b867893dddf23be0976480291acf8b8764cb",
+ "event": "workflow_dispatch",
+ "run_id": "40396925799",
+ "stage_seconds": {
+  "checkout": 3.3,
+  "scan": 51.5,
+  "triage": 45.8,
+  "report": 0.1
+ },
+ "gpu_queue_wait_seconds": 353.4,
+ "pipeline_seconds_excl_queue": 100.6,
+ "budget_seconds": 600,
+ "within_budget": true,
+ "triage_added_seconds": 45.8,
+ "triage_share_of_pipeline": 0.455,
+ "triage": {
+  "model": "qwen2.5-coder:7b",
+  "mode": "full",
+  "findings_scanned": 16,
+  "findings_in_scope": 16,
+  "outcomes": {
+   "human_review": 9,
+   "confirmed": 7
+  },
+  "gate": "fail",
+  "gate_reasons": [
+   "an error-level finding was kept"
+  ],
+  "budget_seconds": 420.0,
+  "stage_seconds": {
+   "normalise": 0.01,
+   "gpu_wait": 353.41,
+   "model_load": 1.37,
+   "triage": 44.13,
+   "guardrails": 0.01,
+   "report": 0.01
+  },
+  "per_finding_seconds": {
+   "n": 16,
+   "mean": 2.76,
+   "max": 3.92
+  },
+  "gpu_energy_wh": 1.843,
+  "gpu_mean_w": 147.0,
+  "gpu_peak_w": 161.3,
+  "power_samples": 45,
+  "guardrails": [
+   "evidence",
+   "schema",
+   "severity",
+   "weakcrypto"
+  ],
+  "rules_fired": {
+   "keep:severity": 8,
+   "keep:verdict": 8
+  },
+  "ground_truth": {
+   "dismissed_real": 0,
+   "dismissed_fake": 0,
+   "kept_real": 12,
+   "kept_fake": 4
+  }
+ }
+}

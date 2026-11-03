@@ -1,0 +1,157 @@
+variant,category,TP,FP,FN,TN,precision,TPR,FPR,score
+semgrep,cmdi,112,96,14,29,0.5385,0.8889,0.768,0.1209
+semgrep,crypto,130,0,0,116,1.0,1.0,0.0,1.0
+semgrep,hash,89,0,40,107,1.0,0.6899,0.0,0.6899
+semgrep,ldapi,26,28,1,4,0.4815,0.963,0.875,0.088
+semgrep,pathtraver,120,106,13,29,0.531,0.9023,0.7852,0.1171
+semgrep,securecookie,0,0,36,31,0.0,0.0,0.0,0.0
+semgrep,sqli,234,143,38,89,0.6207,0.8603,0.6164,0.2439
+semgrep,trustbound,43,18,40,25,0.7049,0.5181,0.4186,0.0995
+semgrep,weakrand,0,0,218,275,0.0,0.0,0.0,0.0
+semgrep,xpathi,14,13,1,7,0.5185,0.9333,0.65,0.2833
+semgrep,xss,202,108,44,101,0.6516,0.8211,0.5167,0.3044
+semgrep,OVERALL (pooled),970,512,445,813,0.6545,0.6855,0.3864,0.2991
+semgrep,OVERALL (avg of categories),,,,,,,,0.2679
+sonarqube,cmdi,0,0,126,125,0.0,0.0,0.0,0.0
+sonarqube,crypto,130,27,0,89,0.828,1.0,0.2328,0.7672
+sonarqube,hash,89,0,40,107,1.0,0.6899,0.0,0.6899
+sonarqube,ldapi,0,0,27,32,0.0,0.0,0.0,0.0
+sonarqube,pathtraver,0,0,133,135,0.0,0.0,0.0,0.0
+sonarqube,securecookie,36,0,0,31,1.0,1.0,0.0,1.0
+sonarqube,sqli,272,232,0,0,0.5397,1.0,1.0,0.0
+sonarqube,trustbound,0,0,83,43,0.0,0.0,0.0,0.0
+sonarqube,weakrand,218,0,0,275,1.0,1.0,0.0,1.0
+sonarqube,xpathi,0,0,15,20,0.0,0.0,0.0,0.0
+sonarqube,xss,0,0,246,209,0.0,0.0,0.0,0.0
+sonarqube,OVERALL (pooled),745,259,670,1066,0.742,0.5265,0.1955,0.331
+sonarqube,OVERALL (avg of categories),,,,,,,,0.3143
+spotbugs,cmdi,126,125,0,0,0.502,1.0,1.0,0.0
+spotbugs,crypto,130,0,0,116,1.0,1.0,0.0,1.0
+spotbugs,hash,89,0,40,107,1.0,0.6899,0.0,0.6899
+spotbugs,ldapi,27,32,0,0,0.4576,1.0,1.0,0.0
+spotbugs,pathtraver,133,135,0,0,0.4963,1.0,1.0,0.0
+spotbugs,securecookie,36,0,0,31,1.0,1.0,0.0,1.0
+spotbugs,sqli,272,232,0,0,0.5397,1.0,1.0,0.0
+spotbugs,trustbound,83,43,0,0,0.6587,1.0,1.0,0.0
+spotbugs,weakrand,218,0,0,275,1.0,1.0,0.0,1.0
+spotbugs,xpathi,15,20,0,0,0.4286,1.0,1.0,0.0
+spotbugs,xss,246,147,0,62,0.626,1.0,0.7033,0.2967
+spotbugs,OVERALL (pooled),1375,734,40,591,0.652,0.9717,0.554,0.4178
+spotbugs,OVERALL (avg of categories),,,,,,,,0.3624
+codeql,cmdi,126,64,0,61,0.6632,1.0,0.512,0.488
+codeql,crypto,130,27,0,89,0.828,1.0,0.2328,0.7672
+codeql,hash,129,33,0,74,0.7963,1.0,0.3084,0.6916
+codeql,ldapi,27,13,0,19,0.675,1.0,0.4062,0.5938
+codeql,pathtraver,133,66,0,69,0.6683,1.0,0.4889,0.5111
+codeql,securecookie,36,0,0,31,1.0,1.0,0.0,1.0
+codeql,sqli,272,207,0,25,0.5678,1.0,0.8922,0.1078
+codeql,trustbound,83,24,0,19,0.7757,1.0,0.5581,0.4419
+codeql,weakrand,218,0,0,275,1.0,1.0,0.0,1.0
+codeql,xpathi,15,7,0,13,0.6818,1.0,0.35,0.65
+codeql,xss,246,90,0,119,0.7321,1.0,0.4306,0.5694
+codeql,OVERALL (pooled),1415,531,0,794,0.7271,1.0,0.4008,0.5992
+codeql,OVERALL (avg of categories),,,,,,,,0.6201
+union,cmdi,126,125,0,0,0.502,1.0,1.0,0.0
+union,crypto,130,27,0,89,0.828,1.0,0.2328,0.7672
+union,hash,129,33,0,74,0.7963,1.0,0.3084,0.6916
+union,ldapi,27,32,0,0,0.4576,1.0,1.0,0.0
+union,pathtraver,133,135,0,0,0.4963,1.0,1.0,0.0
+union,securecookie,36,0,0,31,1.0,1.0,0.0,1.0
+union,sqli,272,232,0,0,0.5397,1.0,1.0,0.0
+union,trustbound,83,43,0,0,0.6587,1.0,1.0,0.0
+union,weakrand,218,0,0,275,1.0,1.0,0.0,1.0
+union,xpathi,15,20,0,0,0.4286,1.0,1.0,0.0
+union,xss,246,200,0,9,0.5516,1.0,0.9569,0.0431
+union,OVERALL (pooled),1415,847,0,478,0.6256,1.0,0.6392,0.3608
+union,OVERALL (avg of categories),,,,,,,,0.3184
+intersection,cmdi,0,0,126,125,0.0,0.0,0.0,0.0
+intersection,crypto,130,0,0,116,1.0,1.0,0.0,1.0
+intersection,hash,89,0,40,107,1.0,0.6899,0.0,0.6899
+intersection,ldapi,0,0,27,32,0.0,0.0,0.0,0.0
+intersection,pathtraver,0,0,133,135,0.0,0.0,0.0,0.0
+intersection,securecookie,0,0,36,31,0.0,0.0,0.0,0.0
+intersection,sqli,234,130,38,102,0.6429,0.8603,0.5603,0.2999
+intersection,trustbound,0,0,83,43,0.0,0.0,0.0,0.0
+intersection,weakrand,0,0,218,275,0.0,0.0,0.0,0.0
+intersection,xpathi,0,0,15,20,0.0,0.0,0.0,0.0
+intersection,xss,0,0,246,209,0.0,0.0,0.0,0.0
+intersection,OVERALL (pooled),453,130,962,1195,0.777,0.3201,0.0981,0.222
+intersection,OVERALL (avg of categories),,,,,,,,0.1809
+semgrep+sonarqube,cmdi,112,96,14,29,0.5385,0.8889,0.768,0.1209
+semgrep+sonarqube,crypto,130,27,0,89,0.828,1.0,0.2328,0.7672
+semgrep+sonarqube,hash,89,0,40,107,1.0,0.6899,0.0,0.6899
+semgrep+sonarqube,ldapi,26,28,1,4,0.4815,0.963,0.875,0.088
+semgrep+sonarqube,pathtraver,120,106,13,29,0.531,0.9023,0.7852,0.1171
+semgrep+sonarqube,securecookie,36,0,0,31,1.0,1.0,0.0,1.0
+semgrep+sonarqube,sqli,272,232,0,0,0.5397,1.0,1.0,0.0
+semgrep+sonarqube,trustbound,43,18,40,25,0.7049,0.5181,0.4186,0.0995
+semgrep+sonarqube,weakrand,218,0,0,275,1.0,1.0,0.0,1.0
+semgrep+sonarqube,xpathi,14,13,1,7,0.5185,0.9333,0.65,0.2833
+semgrep+sonarqube,xss,202,108,44,101,0.6516,0.8211,0.5167,0.3044
+semgrep+sonarqube,OVERALL (pooled),1262,628,153,697,0.6677,0.8919,0.474,0.4179
+semgrep+sonarqube,OVERALL (avg of categories),,,,,,,,0.4064
+semgrep+spotbugs,cmdi,126,125,0,0,0.502,1.0,1.0,0.0
+semgrep+spotbugs,crypto,130,0,0,116,1.0,1.0,0.0,1.0
+semgrep+spotbugs,hash,89,0,40,107,1.0,0.6899,0.0,0.6899
+semgrep+spotbugs,ldapi,27,32,0,0,0.4576,1.0,1.0,0.0
+semgrep+spotbugs,pathtraver,133,135,0,0,0.4963,1.0,1.0,0.0
+semgrep+spotbugs,securecookie,36,0,0,31,1.0,1.0,0.0,1.0
+semgrep+spotbugs,sqli,272,232,0,0,0.5397,1.0,1.0,0.0
+semgrep+spotbugs,trustbound,83,43,0,0,0.6587,1.0,1.0,0.0
+semgrep+spotbugs,weakrand,218,0,0,275,1.0,1.0,0.0,1.0
+semgrep+spotbugs,xpathi,15,20,0,0,0.4286,1.0,1.0,0.0
+semgrep+spotbugs,xss,246,182,0,27,0.5748,1.0,0.8708,0.1292
+semgrep+spotbugs,OVERALL (pooled),1375,769,40,556,0.6413,0.9717,0.5804,0.3914
+semgrep+spotbugs,OVERALL (avg of categories),,,,,,,,0.3472
+semgrep+codeql,cmdi,126,112,0,13,0.5294,1.0,0.896,0.104
+semgrep+codeql,crypto,130,27,0,89,0.828,1.0,0.2328,0.7672
+semgrep+codeql,hash,129,33,0,74,0.7963,1.0,0.3084,0.6916
+semgrep+codeql,ldapi,27,28,0,4,0.4909,1.0,0.875,0.125
+semgrep+codeql,pathtraver,133,122,0,13,0.5216,1.0,0.9037,0.0963
+semgrep+codeql,securecookie,36,0,0,31,1.0,1.0,0.0,1.0
+semgrep+codeql,sqli,272,220,0,12,0.5528,1.0,0.9483,0.0517
+semgrep+codeql,trustbound,83,30,0,13,0.7345,1.0,0.6977,0.3023
+semgrep+codeql,weakrand,218,0,0,275,1.0,1.0,0.0,1.0
+semgrep+codeql,xpathi,15,17,0,3,0.4688,1.0,0.85,0.15
+semgrep+codeql,xss,246,143,0,66,0.6324,1.0,0.6842,0.3158
+semgrep+codeql,OVERALL (pooled),1415,732,0,593,0.6591,1.0,0.5525,0.4475
+semgrep+codeql,OVERALL (avg of categories),,,,,,,,0.4185
+sonarqube+spotbugs,cmdi,126,125,0,0,0.502,1.0,1.0,0.0
+sonarqube+spotbugs,crypto,130,27,0,89,0.828,1.0,0.2328,0.7672
+sonarqube+spotbugs,hash,89,0,40,107,1.0,0.6899,0.0,0.6899
+sonarqube+spotbugs,ldapi,27,32,0,0,0.4576,1.0,1.0,0.0
+sonarqube+spotbugs,pathtraver,133,135,0,0,0.4963,1.0,1.0,0.0
+sonarqube+spotbugs,securecookie,36,0,0,31,1.0,1.0,0.0,1.0
+sonarqube+spotbugs,sqli,272,232,0,0,0.5397,1.0,1.0,0.0
+sonarqube+spotbugs,trustbound,83,43,0,0,0.6587,1.0,1.0,0.0
+sonarqube+spotbugs,weakrand,218,0,0,275,1.0,1.0,0.0,1.0
+sonarqube+spotbugs,xpathi,15,20,0,0,0.4286,1.0,1.0,0.0
+sonarqube+spotbugs,xss,246,147,0,62,0.626,1.0,0.7033,0.2967
+sonarqube+spotbugs,OVERALL (pooled),1375,761,40,564,0.6437,0.9717,0.5743,0.3974
+sonarqube+spotbugs,OVERALL (avg of categories),,,,,,,,0.3413
+sonarqube+codeql,cmdi,126,64,0,61,0.6632,1.0,0.512,0.488
+sonarqube+codeql,crypto,130,27,0,89,0.828,1.0,0.2328,0.7672
+sonarqube+codeql,hash,129,33,0,74,0.7963,1.0,0.3084,0.6916
+sonarqube+codeql,ldapi,27,13,0,19,0.675,1.0,0.4062,0.5938
+sonarqube+codeql,pathtraver,133,66,0,69,0.6683,1.0,0.4889,0.5111
+sonarqube+codeql,securecookie,36,0,0,31,1.0,1.0,0.0,1.0
+sonarqube+codeql,sqli,272,232,0,0,0.5397,1.0,1.0,0.0
+sonarqube+codeql,trustbound,83,24,0,19,0.7757,1.0,0.5581,0.4419
+sonarqube+codeql,weakrand,218,0,0,275,1.0,1.0,0.0,1.0
+sonarqube+codeql,xpathi,15,7,0,13,0.6818,1.0,0.35,0.65
+sonarqube+codeql,xss,246,90,0,119,0.7321,1.0,0.4306,0.5694
+sonarqube+codeql,OVERALL (pooled),1415,556,0,769,0.7179,1.0,0.4196,0.5804
+sonarqube+codeql,OVERALL (avg of categories),,,,,,,,0.6103
+spotbugs+codeql,cmdi,126,125,0,0,0.502,1.0,1.0,0.0
+spotbugs+codeql,crypto,130,27,0,89,0.828,1.0,0.2328,0.7672
+spotbugs+codeql,hash,129,33,0,74,0.7963,1.0,0.3084,0.6916
+spotbugs+codeql,ldapi,27,32,0,0,0.4576,1.0,1.0,0.0
+spotbugs+codeql,pathtraver,133,135,0,0,0.4963,1.0,1.0,0.0
+spotbugs+codeql,securecookie,36,0,0,31,1.0,1.0,0.0,1.0
+spotbugs+codeql,sqli,272,232,0,0,0.5397,1.0,1.0,0.0
+spotbugs+codeql,trustbound,83,43,0,0,0.6587,1.0,1.0,0.0
+spotbugs+codeql,weakrand,218,0,0,275,1.0,1.0,0.0,1.0
+spotbugs+codeql,xpathi,15,20,0,0,0.4286,1.0,1.0,0.0
+spotbugs+codeql,xss,246,189,0,20,0.5655,1.0,0.9043,0.0957
+spotbugs+codeql,OVERALL (pooled),1415,836,0,489,0.6286,1.0,0.6309,0.3691
+spotbugs+codeql,OVERALL (avg of categories),,,,,,,,0.3231

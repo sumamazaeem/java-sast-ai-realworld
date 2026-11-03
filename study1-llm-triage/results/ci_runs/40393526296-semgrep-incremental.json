@@ -1,0 +1,67 @@
+{
+ "scanner": "semgrep",
+ "mode": "incremental",
+ "commit": "c9b3ecfa926b4f5097168813bb2f71cc5b35c926",
+ "event": "push",
+ "run_id": "40393526296",
+ "stage_seconds": {
+  "checkout": 2.9,
+  "scan": 7.8,
+  "triage": 52.4,
+  "report": 0.1
+ },
+ "gpu_queue_wait_seconds": 286.4,
+ "pipeline_seconds_excl_queue": 63.3,
+ "budget_seconds": 600,
+ "within_budget": true,
+ "triage_added_seconds": 52.4,
+ "triage_share_of_pipeline": 0.828,
+ "triage": {
+  "model": "qwen2.5-coder:7b",
+  "mode": "incremental",
+  "findings_scanned": 17,
+  "findings_in_scope": 17,
+  "outcomes": {
+   "confirmed": 15,
+   "dismissed": 1,
+   "human_review": 1
+  },
+  "gate": "pass",
+  "gate_reasons": [],
+  "budget_seconds": 420.0,
+  "stage_seconds": {
+   "normalise": 0.01,
+   "gpu_wait": 286.45,
+   "model_load": 1.32,
+   "triage": 50.86,
+   "guardrails": 0.02,
+   "report": 0.03
+  },
+  "per_finding_seconds": {
+   "n": 17,
+   "mean": 2.99,
+   "max": 4.87
+  },
+  "gpu_energy_wh": 2.093,
+  "gpu_mean_w": 146.7,
+  "gpu_peak_w": 158.4,
+  "power_samples": 51,
+  "guardrails": [
+   "evidence",
+   "schema",
+   "severity",
+   "weakcrypto"
+  ],
+  "rules_fired": {
+   "keep:verdict": 15,
+   "dismiss": 1,
+   "keep:weakcrypto": 1
+  },
+  "ground_truth": {
+   "dismissed_real": 0,
+   "dismissed_fake": 1,
+   "kept_real": 10,
+   "kept_fake": 6
+  }
+ }
+}

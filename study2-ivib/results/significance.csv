@@ -1,0 +1,23 @@
+dataset,ours,other,units,ours_right_other_wrong,ours_wrong_other_right,test,p
+cwebench,IVIB-R + LLM specs + real fixes (Enh. 1+2),CodeQL,2118,21,29,chi-square (continuity corrected),0.322199
+cwebench,IVIB-R + LLM specs + real fixes (Enh. 1+2),Semgrep,2118,9,10,exact binomial,1.0
+cwebench,IVIB-R + LLM specs + real fixes (Enh. 1+2),"IVIB-R (synthetic training, IVIB specs)",2118,9,7,exact binomial,0.803619
+cwebench,IVIB-R + LLM specs + real fixes (Enh. 1+2),"IVIB-R (synthetic, + parameters as sources)",2118,17,17,chi-square (continuity corrected),0.863832
+cwebench,IVIB-R + LLM specs + real fixes (Enh. 1+2),IVIB-R + LLM specs (Enh. 1),2118,55,50,chi-square (continuity corrected),0.69627
+cwebench,IVIB-R + LLM specs + real fixes (Enh. 1+2),IVIB-R + real fix training (Enh. 2),2118,6,13,exact binomial,0.167068
+cwebench,IVIB-R + LLM specs + real fixes (Enh. 1+2),CodeBERT (synthetic training),2118,1128,971,chi-square (continuity corrected),0.000662
+cwebench,IVIB-R + LLM specs + real fixes (Enh. 1+2),CodeBERT (+ real fix training),2118,524,418,chi-square (continuity corrected),0.000624
+javacve,IVIB-R + LLM specs + real fixes (Enh. 1+2),CodeQL,72,0,5,exact binomial,0.0625
+javacve,IVIB-R + LLM specs + real fixes (Enh. 1+2),Semgrep,72,0,0,none (no discordant units),1.0
+javacve,IVIB-R + LLM specs + real fixes (Enh. 1+2),"IVIB-R (synthetic training, IVIB specs)",72,0,0,none (no discordant units),1.0
+javacve,IVIB-R + LLM specs + real fixes (Enh. 1+2),"IVIB-R (synthetic, + parameters as sources)",72,1,0,exact binomial,1.0
+javacve,IVIB-R + LLM specs + real fixes (Enh. 1+2),IVIB-R + LLM specs (Enh. 1),72,3,1,exact binomial,0.625
+javacve,IVIB-R + LLM specs + real fixes (Enh. 1+2),IVIB-R + real fix training (Enh. 2),72,0,0,none (no discordant units),1.0
+javacve,IVIB-R + LLM specs + real fixes (Enh. 1+2),CodeBERT (synthetic training),72,36,36,chi-square (continuity corrected),0.906186
+javacve,IVIB-R + LLM specs + real fixes (Enh. 1+2),CodeBERT (+ real fix training),72,4,7,exact binomial,0.548828
+cvefixes,IVIB-R + LLM specs + real fixes (Enh. 1+2),"IVIB-R (synthetic training, IVIB specs)",426,11,15,chi-square (continuity corrected),0.556298
+cvefixes,IVIB-R + LLM specs + real fixes (Enh. 1+2),"IVIB-R (synthetic, + parameters as sources)",426,3,12,exact binomial,0.035156
+cvefixes,IVIB-R + LLM specs + real fixes (Enh. 1+2),IVIB-R + LLM specs (Enh. 1),426,12,13,chi-square (continuity corrected),1.0
+cvefixes,IVIB-R + LLM specs + real fixes (Enh. 1+2),IVIB-R + real fix training (Enh. 2),426,3,11,exact binomial,0.057373
+cvefixes,IVIB-R + LLM specs + real fixes (Enh. 1+2),CodeBERT (synthetic training),426,244,148,chi-square (continuity corrected),2e-06
+cvefixes,IVIB-R + LLM specs + real fixes (Enh. 1+2),CodeBERT (+ real fix training),426,63,70,chi-square (continuity corrected),0.602878

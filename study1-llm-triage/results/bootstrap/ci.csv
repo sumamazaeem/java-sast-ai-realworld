@@ -1,0 +1,299 @@
+dataset,tool,method,policy,metric,estimate,ci_low,ci_high
+owasp_java,semgrep,-,baseline,precision,0.654521,0.631181,0.677763
+owasp_java,semgrep,-,baseline,recall,0.685512,0.663143,0.705799
+owasp_java,semgrep,-,baseline,fpr,0.386415,0.363704,0.410661
+owasp_java,semgrep,-,baseline,f1,0.669658,0.65035,0.687309
+owasp_java,semgrep,-,baseline,score,0.267905,0.231716,0.302373
+owasp_java,semgrep,Random Forest,unguarded,precision,0.979253,0.969789,0.987952
+owasp_java,semgrep,Random Forest,unguarded,recall,0.667138,0.644634,0.687544
+owasp_java,semgrep,Random Forest,unguarded,fpr,0.015094,0.008915,0.022043
+owasp_java,semgrep,Random Forest,unguarded,f1,0.793611,0.77691,0.808115
+owasp_java,semgrep,Random Forest,unguarded,score,0.627447,0.594851,0.656214
+owasp_java,semgrep,Random Forest,guarded,precision,0.817324,0.797918,0.837031
+owasp_java,semgrep,Random Forest,guarded,recall,0.673498,0.651246,0.694093
+owasp_java,semgrep,Random Forest,guarded,fpr,0.160755,0.144478,0.177661
+owasp_java,semgrep,Random Forest,guarded,f1,0.738473,0.720576,0.754426
+owasp_java,semgrep,Random Forest,guarded,score,0.498914,0.465486,0.52818
+owasp_java,semgrep,Random Forest,guarded,score diff v2 - raw,0.231009,0.193868,0.26498
+owasp_java,semgrep,Random Forest,guarded,score diff v2 - unguarded,-0.128533,-0.139133,-0.11813
+owasp_java,semgrep,Qwen2.5-Coder 7B,unguarded,precision,0.675169,0.650401,0.700375
+owasp_java,semgrep,Qwen2.5-Coder 7B,unguarded,recall,0.636042,0.614315,0.657143
+owasp_java,semgrep,Qwen2.5-Coder 7B,unguarded,fpr,0.326792,0.304085,0.350669
+owasp_java,semgrep,Qwen2.5-Coder 7B,unguarded,f1,0.655022,0.635464,0.673998
+owasp_java,semgrep,Qwen2.5-Coder 7B,unguarded,score,0.298945,0.261261,0.335835
+owasp_java,semgrep,Qwen2.5-Coder 7B,guarded,precision,0.666197,0.642553,0.690014
+owasp_java,semgrep,Qwen2.5-Coder 7B,guarded,recall,0.668551,0.646893,0.68892
+owasp_java,semgrep,Qwen2.5-Coder 7B,guarded,fpr,0.357736,0.335659,0.381135
+owasp_java,semgrep,Qwen2.5-Coder 7B,guarded,f1,0.667372,0.648763,0.685537
+owasp_java,semgrep,Qwen2.5-Coder 7B,guarded,score,0.30085,0.261802,0.337879
+owasp_java,semgrep,Qwen2.5-Coder 7B,guarded,score diff v2 - raw,0.032945,0.009595,0.057027
+owasp_java,semgrep,Qwen2.5-Coder 7B,guarded,score diff v2 - unguarded,0.001905,-0.011721,0.015344
+owasp_java,semgrep,Qwen2.5-Coder 14B,unguarded,precision,0.661806,0.638239,0.685816
+owasp_java,semgrep,Qwen2.5-Coder 14B,unguarded,recall,0.673498,0.650646,0.693674
+owasp_java,semgrep,Qwen2.5-Coder 14B,unguarded,fpr,0.367547,0.346324,0.391271
+owasp_java,semgrep,Qwen2.5-Coder 14B,unguarded,f1,0.667601,0.648009,0.686137
+owasp_java,semgrep,Qwen2.5-Coder 14B,unguarded,score,0.280162,0.243017,0.315609
+owasp_java,semgrep,Qwen2.5-Coder 14B,guarded,precision,0.661644,0.637908,0.6855
+owasp_java,semgrep,Qwen2.5-Coder 14B,guarded,recall,0.682686,0.660511,0.702997
+owasp_java,semgrep,Qwen2.5-Coder 14B,guarded,fpr,0.37283,0.350851,0.396283
+owasp_java,semgrep,Qwen2.5-Coder 14B,guarded,f1,0.672,0.653165,0.690241
+owasp_java,semgrep,Qwen2.5-Coder 14B,guarded,score,0.284671,0.246359,0.320327
+owasp_java,semgrep,Qwen2.5-Coder 14B,guarded,score diff v2 - raw,0.016766,0.004885,0.030613
+owasp_java,semgrep,Qwen2.5-Coder 14B,guarded,score diff v2 - unguarded,0.004509,-0.001365,0.010526
+owasp_java,codeql,-,baseline,precision,0.727133,0.707242,0.746894
+owasp_java,codeql,-,baseline,recall,1.0,1.0,1.0
+owasp_java,codeql,-,baseline,fpr,0.400755,0.377112,0.424514
+owasp_java,codeql,-,baseline,f1,0.842011,0.82852,0.855111
+owasp_java,codeql,-,baseline,score,0.620063,0.587615,0.652414
+owasp_java,codeql,Qwen2.5-Coder 7B,unguarded,precision,0.774504,0.753576,0.794921
+owasp_java,codeql,Qwen2.5-Coder 7B,unguarded,recall,0.854417,0.836031,0.872169
+owasp_java,codeql,Qwen2.5-Coder 7B,unguarded,fpr,0.26566,0.243421,0.288621
+owasp_java,codeql,Qwen2.5-Coder 7B,unguarded,f1,0.8125,0.797111,0.827496
+owasp_java,codeql,Qwen2.5-Coder 7B,unguarded,score,0.604694,0.566634,0.643518
+owasp_java,codeql,Qwen2.5-Coder 7B,guarded,precision,0.727133,0.707242,0.746894
+owasp_java,codeql,Qwen2.5-Coder 7B,guarded,recall,1.0,1.0,1.0
+owasp_java,codeql,Qwen2.5-Coder 7B,guarded,fpr,0.400755,0.377112,0.424514
+owasp_java,codeql,Qwen2.5-Coder 7B,guarded,f1,0.842011,0.82852,0.855111
+owasp_java,codeql,Qwen2.5-Coder 7B,guarded,score,0.620063,0.587615,0.652414
+owasp_java,codeql,Qwen2.5-Coder 7B,guarded,score diff v2 - raw,0.0,0.0,0.0
+owasp_java,codeql,Qwen2.5-Coder 7B,guarded,score diff v2 - unguarded,0.015368,-0.018568,0.048635
+juliet,all,-,baseline,precision,0.512777,0.471088,0.552137
+juliet,all,-,baseline,recall,1.0,1.0,1.0
+juliet,all,-,baseline,f1,0.677928,0.640462,0.711454
+juliet,all,-,baseline,other_removed,0.0,0.0,0.0
+juliet,all,-,baseline,real_lost,0,0,0
+juliet,all,Qwen2.5-Coder 7B,unguarded,precision,0.54251,0.5,0.58498
+juliet,all,Qwen2.5-Coder 7B,unguarded,recall,0.890365,0.854369,0.924399
+juliet,all,Qwen2.5-Coder 7B,unguarded,f1,0.674214,0.637076,0.709677
+juliet,all,Qwen2.5-Coder 7B,unguarded,other_removed,0.20979,0.16041,0.26087
+juliet,all,Qwen2.5-Coder 7B,unguarded,real_lost,33,22,44
+juliet,all,Qwen2.5-Coder 7B,guarded,precision,0.512777,0.471088,0.552137
+juliet,all,Qwen2.5-Coder 7B,guarded,recall,1.0,1.0,1.0
+juliet,all,Qwen2.5-Coder 7B,guarded,f1,0.677928,0.640462,0.711454
+juliet,all,Qwen2.5-Coder 7B,guarded,other_removed,0.0,0.0,0.0
+juliet,all,Qwen2.5-Coder 7B,guarded,real_lost,0,0,0
+juliet,all,Qwen2.5-Coder 7B,guarded+agree,precision,0.512777,0.471088,0.552137
+juliet,all,Qwen2.5-Coder 7B,guarded+agree,recall,1.0,1.0,1.0
+juliet,all,Qwen2.5-Coder 7B,guarded+agree,f1,0.677928,0.640462,0.711454
+juliet,all,Qwen2.5-Coder 7B,guarded+agree,other_removed,0.0,0.0,0.0
+juliet,all,Qwen2.5-Coder 7B,guarded+agree,real_lost,0,0,0
+juliet,semgrep,-,baseline,precision,0.43128,0.362791,0.502392
+juliet,semgrep,-,baseline,recall,1.0,1.0,1.0
+juliet,semgrep,-,baseline,f1,0.602649,0.532423,0.66879
+juliet,semgrep,-,baseline,other_removed,0.0,0.0,0.0
+juliet,semgrep,-,baseline,real_lost,0,0,0
+juliet,semgrep,Qwen2.5-Coder 7B,unguarded,precision,0.470899,0.398058,0.545455
+juliet,semgrep,Qwen2.5-Coder 7B,unguarded,recall,0.978022,0.94186,1.0
+juliet,semgrep,Qwen2.5-Coder 7B,unguarded,f1,0.635714,0.565737,0.701639
+juliet,semgrep,Qwen2.5-Coder 7B,unguarded,other_removed,0.166667,0.091667,0.244094
+juliet,semgrep,Qwen2.5-Coder 7B,unguarded,real_lost,2,0,5
+juliet,semgrep,Qwen2.5-Coder 7B,guarded,precision,0.43128,0.362791,0.502392
+juliet,semgrep,Qwen2.5-Coder 7B,guarded,recall,1.0,1.0,1.0
+juliet,semgrep,Qwen2.5-Coder 7B,guarded,f1,0.602649,0.532423,0.66879
+juliet,semgrep,Qwen2.5-Coder 7B,guarded,other_removed,0.0,0.0,0.0
+juliet,semgrep,Qwen2.5-Coder 7B,guarded,real_lost,0,0,0
+juliet,semgrep,Qwen2.5-Coder 7B,guarded+agree,precision,0.43128,0.362791,0.502392
+juliet,semgrep,Qwen2.5-Coder 7B,guarded+agree,recall,1.0,1.0,1.0
+juliet,semgrep,Qwen2.5-Coder 7B,guarded+agree,f1,0.602649,0.532423,0.66879
+juliet,semgrep,Qwen2.5-Coder 7B,guarded+agree,other_removed,0.0,0.0,0.0
+juliet,semgrep,Qwen2.5-Coder 7B,guarded+agree,real_lost,0,0,0
+juliet,codeql,-,baseline,precision,0.558511,0.510471,0.608
+juliet,codeql,-,baseline,recall,1.0,1.0,1.0
+juliet,codeql,-,baseline,f1,0.716724,0.67591,0.756219
+juliet,codeql,-,baseline,other_removed,0.0,0.0,0.0
+juliet,codeql,-,baseline,real_lost,0,0,0
+juliet,codeql,Qwen2.5-Coder 7B,unguarded,precision,0.586885,0.532203,0.640264
+juliet,codeql,Qwen2.5-Coder 7B,unguarded,recall,0.852381,0.804444,0.898058
+juliet,codeql,Qwen2.5-Coder 7B,unguarded,f1,0.695146,0.649087,0.738878
+juliet,codeql,Qwen2.5-Coder 7B,unguarded,other_removed,0.240964,0.174194,0.309091
+juliet,codeql,Qwen2.5-Coder 7B,unguarded,real_lost,31,21,42
+juliet,codeql,Qwen2.5-Coder 7B,guarded,precision,0.558511,0.510471,0.608
+juliet,codeql,Qwen2.5-Coder 7B,guarded,recall,1.0,1.0,1.0
+juliet,codeql,Qwen2.5-Coder 7B,guarded,f1,0.716724,0.67591,0.756219
+juliet,codeql,Qwen2.5-Coder 7B,guarded,other_removed,0.0,0.0,0.0
+juliet,codeql,Qwen2.5-Coder 7B,guarded,real_lost,0,0,0
+juliet,codeql,Qwen2.5-Coder 7B,guarded+agree,precision,0.558511,0.510471,0.608
+juliet,codeql,Qwen2.5-Coder 7B,guarded+agree,recall,1.0,1.0,1.0
+juliet,codeql,Qwen2.5-Coder 7B,guarded+agree,f1,0.716724,0.67591,0.756219
+juliet,codeql,Qwen2.5-Coder 7B,guarded+agree,other_removed,0.0,0.0,0.0
+juliet,codeql,Qwen2.5-Coder 7B,guarded+agree,real_lost,0,0,0
+juliet,all,Llama 3.1 8B,unguarded,precision,0.542074,0.497121,0.586074
+juliet,all,Llama 3.1 8B,unguarded,recall,0.920266,0.888514,0.949045
+juliet,all,Llama 3.1 8B,unguarded,f1,0.682266,0.643853,0.718605
+juliet,all,Llama 3.1 8B,unguarded,other_removed,0.181818,0.138889,0.228188
+juliet,all,Llama 3.1 8B,unguarded,real_lost,24,15,34
+juliet,all,Llama 3.1 8B,guarded,precision,0.512777,0.471088,0.552137
+juliet,all,Llama 3.1 8B,guarded,recall,1.0,1.0,1.0
+juliet,all,Llama 3.1 8B,guarded,f1,0.677928,0.640462,0.711454
+juliet,all,Llama 3.1 8B,guarded,other_removed,0.0,0.0,0.0
+juliet,all,Llama 3.1 8B,guarded,real_lost,0,0,0
+juliet,semgrep,Llama 3.1 8B,unguarded,precision,0.494048,0.414773,0.578947
+juliet,semgrep,Llama 3.1 8B,unguarded,recall,0.912088,0.849462,0.967742
+juliet,semgrep,Llama 3.1 8B,unguarded,f1,0.640927,0.565737,0.710345
+juliet,semgrep,Llama 3.1 8B,unguarded,other_removed,0.291667,0.209302,0.37931
+juliet,semgrep,Llama 3.1 8B,unguarded,real_lost,8,3,14
+juliet,semgrep,Llama 3.1 8B,guarded,precision,0.43128,0.362791,0.502392
+juliet,semgrep,Llama 3.1 8B,guarded,recall,1.0,1.0,1.0
+juliet,semgrep,Llama 3.1 8B,guarded,f1,0.602649,0.532423,0.66879
+juliet,semgrep,Llama 3.1 8B,guarded,other_removed,0.0,0.0,0.0
+juliet,semgrep,Llama 3.1 8B,guarded,real_lost,0,0,0
+juliet,codeql,Llama 3.1 8B,unguarded,precision,0.565598,0.51532,0.619335
+juliet,codeql,Llama 3.1 8B,unguarded,recall,0.92381,0.885572,0.957746
+juliet,codeql,Llama 3.1 8B,unguarded,f1,0.701627,0.657895,0.744966
+juliet,codeql,Llama 3.1 8B,unguarded,other_removed,0.10241,0.059211,0.151685
+juliet,codeql,Llama 3.1 8B,unguarded,real_lost,16,9,24
+juliet,codeql,Llama 3.1 8B,guarded,precision,0.558511,0.510471,0.608
+juliet,codeql,Llama 3.1 8B,guarded,recall,1.0,1.0,1.0
+juliet,codeql,Llama 3.1 8B,guarded,f1,0.716724,0.67591,0.756219
+juliet,codeql,Llama 3.1 8B,guarded,other_removed,0.0,0.0,0.0
+juliet,codeql,Llama 3.1 8B,guarded,real_lost,0,0,0
+juliet,all,Random Forest (trained on OWASP),unguarded,precision,0.512777,0.471088,0.552137
+juliet,all,Random Forest (trained on OWASP),unguarded,recall,1.0,1.0,1.0
+juliet,all,Random Forest (trained on OWASP),unguarded,f1,0.677928,0.640462,0.711454
+juliet,all,Random Forest (trained on OWASP),unguarded,other_removed,0.0,0.0,0.0
+juliet,all,Random Forest (trained on OWASP),unguarded,real_lost,0,0,0
+juliet,all,Random Forest (trained on OWASP),guarded,precision,0.512777,0.471088,0.552137
+juliet,all,Random Forest (trained on OWASP),guarded,recall,1.0,1.0,1.0
+juliet,all,Random Forest (trained on OWASP),guarded,f1,0.677928,0.640462,0.711454
+juliet,all,Random Forest (trained on OWASP),guarded,other_removed,0.0,0.0,0.0
+juliet,all,Random Forest (trained on OWASP),guarded,real_lost,0,0,0
+juliet,semgrep,Random Forest (trained on OWASP),unguarded,precision,0.43128,0.362791,0.502392
+juliet,semgrep,Random Forest (trained on OWASP),unguarded,recall,1.0,1.0,1.0
+juliet,semgrep,Random Forest (trained on OWASP),unguarded,f1,0.602649,0.532423,0.66879
+juliet,semgrep,Random Forest (trained on OWASP),unguarded,other_removed,0.0,0.0,0.0
+juliet,semgrep,Random Forest (trained on OWASP),unguarded,real_lost,0,0,0
+juliet,semgrep,Random Forest (trained on OWASP),guarded,precision,0.43128,0.362791,0.502392
+juliet,semgrep,Random Forest (trained on OWASP),guarded,recall,1.0,1.0,1.0
+juliet,semgrep,Random Forest (trained on OWASP),guarded,f1,0.602649,0.532423,0.66879
+juliet,semgrep,Random Forest (trained on OWASP),guarded,other_removed,0.0,0.0,0.0
+juliet,semgrep,Random Forest (trained on OWASP),guarded,real_lost,0,0,0
+juliet,codeql,Random Forest (trained on OWASP),unguarded,precision,0.558511,0.510471,0.608
+juliet,codeql,Random Forest (trained on OWASP),unguarded,recall,1.0,1.0,1.0
+juliet,codeql,Random Forest (trained on OWASP),unguarded,f1,0.716724,0.67591,0.756219
+juliet,codeql,Random Forest (trained on OWASP),unguarded,other_removed,0.0,0.0,0.0
+juliet,codeql,Random Forest (trained on OWASP),unguarded,real_lost,0,0,0
+juliet,codeql,Random Forest (trained on OWASP),guarded,precision,0.558511,0.510471,0.608
+juliet,codeql,Random Forest (trained on OWASP),guarded,recall,1.0,1.0,1.0
+juliet,codeql,Random Forest (trained on OWASP),guarded,f1,0.716724,0.67591,0.756219
+juliet,codeql,Random Forest (trained on OWASP),guarded,other_removed,0.0,0.0,0.0
+juliet,codeql,Random Forest (trained on OWASP),guarded,real_lost,0,0,0
+java_cve,all,-,baseline,precision,0.131004,0.068896,0.252
+java_cve,all,-,baseline,recall,1.0,1.0,1.0
+java_cve,all,-,baseline,f1,0.23166,0.12891,0.402556
+java_cve,all,-,baseline,other_removed,0.0,0.0,0.0
+java_cve,all,-,baseline,real_lost,0,0,0
+java_cve,all,Qwen2.5-Coder 7B,unguarded,precision,0.197232,0.107256,0.323718
+java_cve,all,Qwen2.5-Coder 7B,unguarded,recall,0.633333,0.468085,0.766355
+java_cve,all,Qwen2.5-Coder 7B,unguarded,f1,0.300792,0.177419,0.444444
+java_cve,all,Qwen2.5-Coder 7B,unguarded,other_removed,0.61139,0.349241,0.760992
+java_cve,all,Qwen2.5-Coder 7B,unguarded,real_lost,33,18,50
+java_cve,all,Qwen2.5-Coder 7B,guarded,precision,0.221918,0.131105,0.346457
+java_cve,all,Qwen2.5-Coder 7B,guarded,recall,0.9,0.791667,0.972477
+java_cve,all,Qwen2.5-Coder 7B,guarded,f1,0.356044,0.226757,0.506616
+java_cve,all,Qwen2.5-Coder 7B,guarded,other_removed,0.524288,0.198391,0.710376
+java_cve,all,Qwen2.5-Coder 7B,guarded,real_lost,9,3,16
+java_cve,all,Qwen2.5-Coder 7B,guarded+agree,precision,0.205314,0.126246,0.320293
+java_cve,all,Qwen2.5-Coder 7B,guarded+agree,recall,0.944444,0.868421,0.990826
+java_cve,all,Qwen2.5-Coder 7B,guarded+agree,f1,0.337302,0.22093,0.482243
+java_cve,all,Qwen2.5-Coder 7B,guarded+agree,other_removed,0.448911,0.120643,0.640893
+java_cve,all,Qwen2.5-Coder 7B,guarded+agree,real_lost,5,1,10
+java_cve,semgrep,-,baseline,precision,0.02623,0.002364,0.189189
+java_cve,semgrep,-,baseline,recall,1.0,1.0,1.0
+java_cve,semgrep,-,baseline,f1,0.051118,0.006061,0.318182
+java_cve,semgrep,-,baseline,other_removed,0.0,0.0,0.0
+java_cve,semgrep,-,baseline,real_lost,0,0,0
+java_cve,semgrep,Qwen2.5-Coder 7B,unguarded,precision,0.228571,0.027027,0.590909
+java_cve,semgrep,Qwen2.5-Coder 7B,unguarded,recall,1.0,1.0,1.0
+java_cve,semgrep,Qwen2.5-Coder 7B,unguarded,f1,0.372093,0.066667,0.742857
+java_cve,semgrep,Qwen2.5-Coder 7B,unguarded,other_removed,0.909091,0.779661,0.934292
+java_cve,semgrep,Qwen2.5-Coder 7B,unguarded,real_lost,0,0,0
+java_cve,semgrep,Qwen2.5-Coder 7B,guarded,precision,0.222222,0.027027,0.571429
+java_cve,semgrep,Qwen2.5-Coder 7B,guarded,recall,1.0,1.0,1.0
+java_cve,semgrep,Qwen2.5-Coder 7B,guarded,f1,0.363636,0.064516,0.727273
+java_cve,semgrep,Qwen2.5-Coder 7B,guarded,other_removed,0.905724,0.756757,0.931818
+java_cve,semgrep,Qwen2.5-Coder 7B,guarded,real_lost,0,0,0
+java_cve,semgrep,Qwen2.5-Coder 7B,guarded+agree,precision,0.150943,0.016129,0.483871
+java_cve,semgrep,Qwen2.5-Coder 7B,guarded+agree,recall,1.0,1.0,1.0
+java_cve,semgrep,Qwen2.5-Coder 7B,guarded+agree,f1,0.262295,0.040816,0.652174
+java_cve,semgrep,Qwen2.5-Coder 7B,guarded+agree,other_removed,0.848485,0.698113,0.867257
+java_cve,semgrep,Qwen2.5-Coder 7B,guarded+agree,real_lost,0,0,0
+java_cve,codeql,-,baseline,precision,0.21466,0.134615,0.324484
+java_cve,codeql,-,baseline,recall,1.0,1.0,1.0
+java_cve,codeql,-,baseline,f1,0.353448,0.237288,0.489978
+java_cve,codeql,-,baseline,other_removed,0.0,0.0,0.0
+java_cve,codeql,-,baseline,real_lost,0,0,0
+java_cve,codeql,Qwen2.5-Coder 7B,unguarded,precision,0.192913,0.108108,0.317073
+java_cve,codeql,Qwen2.5-Coder 7B,unguarded,recall,0.597561,0.443038,0.730769
+java_cve,codeql,Qwen2.5-Coder 7B,unguarded,f1,0.291667,0.17737,0.427245
+java_cve,codeql,Qwen2.5-Coder 7B,unguarded,other_removed,0.316667,0.219124,0.406504
+java_cve,codeql,Qwen2.5-Coder 7B,unguarded,real_lost,33,18,50
+java_cve,codeql,Qwen2.5-Coder 7B,guarded,precision,0.221884,0.133515,0.345109
+java_cve,codeql,Qwen2.5-Coder 7B,guarded,recall,0.890244,0.779412,0.969072
+java_cve,codeql,Qwen2.5-Coder 7B,guarded,f1,0.355231,0.230047,0.501002
+java_cve,codeql,Qwen2.5-Coder 7B,guarded,other_removed,0.146667,0.089219,0.211356
+java_cve,codeql,Qwen2.5-Coder 7B,guarded,real_lost,9,3,16
+java_cve,codeql,Qwen2.5-Coder 7B,guarded+agree,precision,0.213296,0.13082,0.327922
+java_cve,codeql,Qwen2.5-Coder 7B,guarded+agree,recall,0.939024,0.859375,0.989474
+java_cve,codeql,Qwen2.5-Coder 7B,guarded+agree,f1,0.34763,0.228782,0.488038
+java_cve,codeql,Qwen2.5-Coder 7B,guarded+agree,other_removed,0.053333,0.026699,0.085859
+java_cve,codeql,Qwen2.5-Coder 7B,guarded+agree,real_lost,5,1,10
+java_cve,all,Llama 3.1 8B,unguarded,precision,0.213415,0.133987,0.330827
+java_cve,all,Llama 3.1 8B,unguarded,recall,0.777778,0.690141,0.887324
+java_cve,all,Llama 3.1 8B,unguarded,f1,0.334928,0.228856,0.463519
+java_cve,all,Llama 3.1 8B,unguarded,other_removed,0.567839,0.287037,0.736086
+java_cve,all,Llama 3.1 8B,unguarded,real_lost,20,8,37
+java_cve,all,Llama 3.1 8B,guarded,precision,0.214646,0.131579,0.338109
+java_cve,all,Llama 3.1 8B,guarded,recall,0.944444,0.868421,0.990826
+java_cve,all,Llama 3.1 8B,guarded,f1,0.349794,0.229572,0.5
+java_cve,all,Llama 3.1 8B,guarded,other_removed,0.479062,0.181818,0.654971
+java_cve,all,Llama 3.1 8B,guarded,real_lost,5,1,10
+java_cve,semgrep,Llama 3.1 8B,unguarded,precision,0.214286,0.0,0.652174
+java_cve,semgrep,Llama 3.1 8B,unguarded,recall,0.75,0.0,1.0
+java_cve,semgrep,Llama 3.1 8B,unguarded,f1,0.333333,0.057143,0.709677
+java_cve,semgrep,Llama 3.1 8B,unguarded,other_removed,0.925926,0.848739,0.95102
+java_cve,semgrep,Llama 3.1 8B,unguarded,real_lost,2,0,5
+java_cve,semgrep,Llama 3.1 8B,guarded,precision,0.166667,0.016949,0.625
+java_cve,semgrep,Llama 3.1 8B,guarded,recall,1.0,1.0,1.0
+java_cve,semgrep,Llama 3.1 8B,guarded,f1,0.285714,0.043478,0.769231
+java_cve,semgrep,Llama 3.1 8B,guarded,other_removed,0.86532,0.809524,0.909091
+java_cve,semgrep,Llama 3.1 8B,guarded,real_lost,0,0,0
+java_cve,codeql,Llama 3.1 8B,unguarded,precision,0.213333,0.135231,0.327103
+java_cve,codeql,Llama 3.1 8B,unguarded,recall,0.780488,0.682353,0.896104
+java_cve,codeql,Llama 3.1 8B,unguarded,f1,0.335079,0.230769,0.459119
+java_cve,codeql,Llama 3.1 8B,unguarded,other_removed,0.213333,0.16092,0.277512
+java_cve,codeql,Llama 3.1 8B,unguarded,real_lost,18,6,33
+java_cve,codeql,Llama 3.1 8B,guarded,precision,0.221264,0.135501,0.342508
+java_cve,codeql,Llama 3.1 8B,guarded,recall,0.939024,0.859375,0.989474
+java_cve,codeql,Llama 3.1 8B,guarded,f1,0.35814,0.236453,0.505119
+java_cve,codeql,Llama 3.1 8B,guarded,other_removed,0.096667,0.055416,0.147727
+java_cve,codeql,Llama 3.1 8B,guarded,real_lost,5,1,10
+java_cve,all,Random Forest (trained on OWASP + Juliet),unguarded,precision,0.066667,0.011905,0.15625
+java_cve,all,Random Forest (trained on OWASP + Juliet),unguarded,recall,0.077778,0.019608,0.123596
+java_cve,all,Random Forest (trained on OWASP + Juliet),unguarded,f1,0.071795,0.019704,0.13198
+java_cve,all,Random Forest (trained on OWASP + Juliet),unguarded,other_removed,0.835846,0.715013,0.906465
+java_cve,all,Random Forest (trained on OWASP + Juliet),unguarded,real_lost,83,51,125
+java_cve,all,Random Forest (trained on OWASP + Juliet),guarded,precision,0.24359,0.139394,0.384164
+java_cve,all,Random Forest (trained on OWASP + Juliet),guarded,recall,0.844444,0.7,0.943182
+java_cve,all,Random Forest (trained on OWASP + Juliet),guarded,f1,0.378109,0.234957,0.535545
+java_cve,all,Random Forest (trained on OWASP + Juliet),guarded,other_removed,0.60469,0.317935,0.775543
+java_cve,all,Random Forest (trained on OWASP + Juliet),guarded,real_lost,14,5,24
+java_cve,semgrep,Random Forest (trained on OWASP + Juliet),unguarded,precision,0.125,0.0,0.5
+java_cve,semgrep,Random Forest (trained on OWASP + Juliet),unguarded,recall,0.25,0.0,0.4
+java_cve,semgrep,Random Forest (trained on OWASP + Juliet),unguarded,f1,0.166667,0.111111,0.410256
+java_cve,semgrep,Random Forest (trained on OWASP + Juliet),unguarded,other_removed,0.952862,0.869565,0.978417
+java_cve,semgrep,Random Forest (trained on OWASP + Juliet),unguarded,real_lost,6,1,14
+java_cve,semgrep,Random Forest (trained on OWASP + Juliet),guarded,precision,0.333333,0.045455,0.7
+java_cve,semgrep,Random Forest (trained on OWASP + Juliet),guarded,recall,1.0,1.0,1.0
+java_cve,semgrep,Random Forest (trained on OWASP + Juliet),guarded,f1,0.5,0.111111,0.823529
+java_cve,semgrep,Random Forest (trained on OWASP + Juliet),guarded,other_removed,0.946128,0.830508,0.973913
+java_cve,semgrep,Random Forest (trained on OWASP + Juliet),guarded,real_lost,0,0,0
+java_cve,codeql,Random Forest (trained on OWASP + Juliet),unguarded,precision,0.05618,0.012422,0.131148
+java_cve,codeql,Random Forest (trained on OWASP + Juliet),unguarded,recall,0.060976,0.018519,0.104167
+java_cve,codeql,Random Forest (trained on OWASP + Juliet),unguarded,f1,0.05848,0.016667,0.106952
+java_cve,codeql,Random Forest (trained on OWASP + Juliet),unguarded,other_removed,0.72,0.640523,0.807309
+java_cve,codeql,Random Forest (trained on OWASP + Juliet),unguarded,real_lost,77,48,113
+java_cve,codeql,Random Forest (trained on OWASP + Juliet),guarded,precision,0.236111,0.137931,0.375
+java_cve,codeql,Random Forest (trained on OWASP + Juliet),guarded,recall,0.829268,0.678571,0.936508
+java_cve,codeql,Random Forest (trained on OWASP + Juliet),guarded,f1,0.367568,0.232759,0.524272
+java_cve,codeql,Random Forest (trained on OWASP + Juliet),guarded,other_removed,0.266667,0.18663,0.364407
+java_cve,codeql,Random Forest (trained on OWASP + Juliet),guarded,real_lost,14,5,24

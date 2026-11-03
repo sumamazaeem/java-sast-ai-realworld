@@ -1,0 +1,27 @@
+{
+  "_note": "Hand-written examples (not taken from OWASP Benchmark, to avoid leaking answers). Keyed by CWE id; triage_llm.py --fewshot adds the matching entries to the prompt.",
+  "89": [
+    {"code": "String id = req.getParameter(\"id\");\nStatement st = conn.createStatement();\nst.executeQuery(\"SELECT * FROM users WHERE id = '\" + id + \"'\");",
+     "verdict": "true_positive", "why": "Request parameter is concatenated into the SQL string."},
+    {"code": "String id = req.getParameter(\"id\");\nString q = \"SELECT * FROM users WHERE id = ?\";\nPreparedStatement ps = conn.prepareStatement(q);\nps.setString(1, id);\nps.executeQuery();",
+     "verdict": "false_positive", "why": "The value is bound as a parameter; the query text is constant."}
+  ],
+  "78": [
+    {"code": "String host = req.getParameter(\"host\");\nRuntime.getRuntime().exec(\"sh -c ping \" + host);",
+     "verdict": "true_positive", "why": "Attacker-controlled text reaches a shell command."},
+    {"code": "String host = req.getParameter(\"host\");\nhost = \"example.org\";\nRuntime.getRuntime().exec(new String[]{\"ping\", host});",
+     "verdict": "false_positive", "why": "The tainted value is overwritten by a constant before the sink."}
+  ],
+  "22": [
+    {"code": "String name = req.getParameter(\"f\");\nnew FileInputStream(new File(BASE_DIR, name));",
+     "verdict": "true_positive", "why": "Request data chooses the file path; '../' can escape BASE_DIR."},
+    {"code": "java.util.Map<String,String> m = new java.util.HashMap<>();\nm.put(\"a\", req.getParameter(\"f\"));\nm.put(\"b\", \"report.txt\");\nnew FileInputStream(new File(BASE_DIR, m.get(\"b\")));",
+     "verdict": "false_positive", "why": "The value used is the constant stored under key 'b', not the request data."}
+  ],
+  "79": [
+    {"code": "String q = req.getParameter(\"q\");\nresp.getWriter().println(\"Results for \" + q);",
+     "verdict": "true_positive", "why": "Request data is written to the HTML response without encoding."},
+    {"code": "String q = req.getParameter(\"q\");\nresp.getWriter().println(\"Results for \" + org.owasp.esapi.ESAPI.encoder().encodeForHTML(q));",
+     "verdict": "false_positive", "why": "The value is HTML-encoded for this output context."}
+  ]
+}

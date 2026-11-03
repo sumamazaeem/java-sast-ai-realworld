@@ -1,0 +1,176 @@
+# DevSecOps pipeline with guarded AI triage (thesis Section 3.8, Figure 3.1).
+# checkout -> SAST scan (SARIF) -> normalise -> local LLM triage -> guardrails -> report + gate -> timing log
+#
+# Runs on the self-hosted runner on the home-lab server (label thesis-gpu), which has Ollama, the
+# scanners and the GPU. The LLM step takes ~/thesis/state/gpu.lock, the lock the overnight
+# experiment queue holds per chunk, so CI and experiments never use the GPU at the same time.
+name: sast-triage
+
+on:
+  push:
+    paths: ["demo/**"]
+  pull_request:
+    paths: ["demo/**"]
+  workflow_dispatch:
+    inputs:
+      scanner:
+        description: "SAST tool"
+        type: choice
+        options: [semgrep, codeql]
+        default: semgrep
+      mode:
+        description: "incremental = only files changed by the push/PR; full = whole target"
+        type: choice
+        options: [full, incremental]
+        default: full
+      target:
+        description: "directory to scan"
+        default: demo/app
+      model:
+        description: "Ollama model (none = scan only, for the no-triage timing baseline)"
+        default: qwen2.5-coder:7b
+      budget_seconds:
+        description: "time allowed for LLM triage"
+        default: "420"
+      max_kept:
+        description: "gate: also fail if more findings are kept (-1 = no count limit)"
+        default: "-1"
+      fail_on_error:
+        description: "gate: fail if an error-level finding is kept (confirmed, human review or not triaged)"
+        type: boolean
+        default: true
+
+concurrency:
+  group: sast-triage-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  THESIS: ${{ github.workspace }}/../thesis
+  SCANNER: ${{ inputs.scanner || 'semgrep' }}
+  MODE: ${{ inputs.mode || (github.event_name == 'workflow_dispatch' && 'full' || 'incremental') }}
+  TARGET: ${{ inputs.target || 'demo/app' }}
+  MODEL: ${{ inputs.model || 'qwen2.5-coder:7b' }}
+  BUDGET: ${{ inputs.budget_seconds || '420' }}
+  MAX_KEPT: ${{ inputs.max_kept || '-1' }}
+  # Gate rule (thesis Section 3.8): the build fails when a finding from an error-level rule survives
+  # triage, i.e. AI triage can only clear lower-severity noise, never let a high-severity finding through.
+  FAIL_ON_ERROR: ${{ github.event_name != 'workflow_dispatch' || inputs.fail_on_error }}
+
+jobs:
+  scan-and-triage:
+    runs-on: [self-hosted, linux, thesis-gpu]
+    timeout-minutes: 45
+    steps:
+      - name: Start timer
+        run: |
+          # outputs live in the job's temp dir (upload-artifact rejects paths containing '..')
+          OUT=$RUNNER_TEMP/ci_out CI_TIMING_FILE=$RUNNER_TEMP/ci_timing.tsv
+          echo "OUT=$OUT" >> "$GITHUB_ENV"; echo "CI_TIMING_FILE=$CI_TIMING_FILE" >> "$GITHUB_ENV"
+          rm -rf "$OUT"; mkdir -p "$OUT"
+          # the scripts are not checked out yet, so the first mark is written directly
+          printf 'checkout\t%s\n' "$(date +%s.%N)" > "$CI_TIMING_FILE"
+
+      - name: 1. Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          # only what the pipeline needs; the repo also holds large experiment results
+          sparse-checkout: |
+            .github
+            scripts
+            config
+            demo
+
+      - name: Changed files
+        run: |
+          python3 -I scripts/ci_timer.py mark scan
+          if [ "$MODE" = incremental ]; then
+            if [ "${{ github.event_name }}" = pull_request ]; then BASE=${{ github.event.pull_request.base.sha }}
+            else BASE=${{ github.event.before }}; fi
+            if [ -z "$BASE" ] || [ "$BASE" = 0000000000000000000000000000000000000000 ]; then BASE=HEAD~1; fi
+            git fetch -q --depth=1 origin "$BASE" 2>/dev/null || true
+            git diff --name-only --diff-filter=AMR "$BASE" HEAD -- "$TARGET" > "$OUT/changed.txt"
+          else
+            find "$TARGET" -type f > "$OUT/changed.txt"
+          fi
+          echo "$(wc -l < "$OUT/changed.txt") files in scope ($MODE)"
+
+      - name: 2. SAST scan (${{ env.SCANNER }})
+        run: |
+          if [ ! -s "$OUT/changed.txt" ]; then echo '{"version":"2.1.0","runs":[]}' > "$OUT/scan.sarif"; exit 0; fi
+          case "$SCANNER" in
+            semgrep)
+              # same rule packs as the batch experiments (scripts/run_semgrep_pilot.sh)
+              xargs -a "$OUT/changed.txt" "$THESIS/.venv/bin/semgrep" scan --metrics=off \
+                --config p/java --config p/owasp-top-ten --sarif --output "$OUT/scan.sarif" \
+                --jobs 4 --timeout 30 --quiet ;;
+            codeql)
+              CQ="$THESIS/tools/codeql/codeql"
+              "$CQ" database create "$OUT/codeql-db" --language=java --build-mode=none \
+                --source-root "$TARGET" --threads=4 --overwrite --quiet
+              "$CQ" database analyze "$OUT/codeql-db" codeql/java-queries:codeql-suites/java-security-extended.qls \
+                --format=sarif-latest --output="$OUT/scan.sarif" --threads=4 --quiet
+              # CodeQL paths are relative to the source root; make them relative to the checkout
+              python3 -I - "$OUT/scan.sarif" "$TARGET" <<'EOF'
+          import json, sys
+          p, root = sys.argv[1], sys.argv[2].rstrip("/")
+          s = json.load(open(p))
+          for run in s["runs"]:
+              for r in run.get("results", []):
+                  for loc in r.get("locations", []):
+                      a = loc["physicalLocation"]["artifactLocation"]
+                      if not a["uri"].startswith(root + "/"):
+                          a["uri"] = f"{root}/{a['uri']}"
+          json.dump(s, open(p, "w"))
+          EOF
+              ;;
+          esac
+
+      - name: 3-5. Normalise, LLM triage, guardrails
+        id: triage
+        run: |
+          python3 -I scripts/ci_timer.py mark triage
+          ARGS=()
+          [ "$MODE" = incremental ] && ARGS+=(--changed-files "$OUT/changed.txt")
+          [ "$MODEL" = none ] && ARGS+=(--no-llm)
+          [ "$FAIL_ON_ERROR" = true ] && ARGS+=(--fail-on-error)
+          # demo only: OWASP Benchmark labels of the demo files, to show what triage got right
+          [ -f demo/expected.csv ] && ARGS+=(--expected demo/expected.csv)
+          set +e
+          "$THESIS/.venv/bin/python" -I scripts/ci_triage.py --sarif "$OUT/scan.sarif" --workspace . \
+            --out-dir "$OUT/triage" --model "$MODEL" --budget-seconds "$BUDGET" \
+            --gpu-lock "$THESIS/state/gpu.lock" --max-kept "$MAX_KEPT" "${ARGS[@]}"
+          echo "gate_exit=$?" >> "$GITHUB_OUTPUT"
+
+      - name: 6. Report
+        if: always()
+        run: |
+          python3 -I scripts/ci_timer.py mark report
+          [ -f "$OUT/triage/report.md" ] && cat "$OUT/triage/report.md" >> "$GITHUB_STEP_SUMMARY"
+          cp "$OUT"/scan.sarif "$OUT/changed.txt" "$OUT/triage/" 2>/dev/null || true
+
+      - name: 7. Timing log
+        if: always()
+        run: |
+          python3 -I scripts/ci_timer.py report --summary "$OUT/triage/triage_summary.json" \
+            --out "$OUT/triage/pipeline_timing.json" \
+            --meta "{\"scanner\": \"$SCANNER\", \"mode\": \"$MODE\", \"commit\": \"$GITHUB_SHA\", \"event\": \"${{ github.event_name }}\", \"run_id\": \"$GITHUB_RUN_ID\"}"
+          mkdir -p "$THESIS/results/ci_runs"
+          cp "$OUT/triage/pipeline_timing.json" "$THESIS/results/ci_runs/${GITHUB_RUN_ID}-${SCANNER}-${MODE}.json"
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sast-triage-${{ env.SCANNER }}-${{ env.MODE }}
+          path: ${{ env.OUT }}/triage/
+          retention-days: 30
+
+      - name: Gate
+        if: steps.triage.outputs.gate_exit != '0'
+        run: |
+          echo "::error::Security gate failed: a high-severity (error-level) finding was kept after triage (see summary)"
+          exit 1
